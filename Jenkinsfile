@@ -29,14 +29,14 @@ pipeline{
                 archiveArtifacts artifacts: 'build/libs/*.jar', fingerprint: true
             }
         }
+    }
 
-        post{
-            success{
-                echo 'Build Successfully'
-            }
-            failure{
-                echo 'Build Failed'
-            }
+    post{
+        success{
+            echo 'Build Successfully'
+        }
+        failure{
+            echo 'Build Failed'
         }
     }
 }
